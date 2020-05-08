@@ -1,0 +1,7 @@
+#highschool-nav {
+    background: white;
+}
+
+.course, .inputs-header {
+    grid-template-columns: 50% 15% 15% 10% 5%;
+}

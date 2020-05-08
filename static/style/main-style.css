@@ -1,0 +1,195 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background: white;
+    color: #005db8;
+    font-family: 'Muli', sans-serif;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Main content griding */
+.all-content {
+    display: grid;
+    grid-template-columns: 20% 80%;
+    overflow: hidden;
+}
+
+/* Main header */
+.main-header {
+    display: grid;
+    background: #f2f2f2;
+    width: 100%;
+    height: 20vh;
+    align-content: center;
+}
+.main-header h1 {
+    display: block;
+    font-size: 42px;
+    text-align: center;
+}
+
+/* Side bar navigation */
+.sidenav {
+    padding-top: 140px;
+    grid-row: 1/5;
+    background-color: lightskyblue;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+/* Main content formatting */
+.main-content {
+    height: 100vh;
+}
+
+.scroll-content {
+    height: 100%;
+    overflow-y: auto;
+}
+
+
+/* Inputs settings */
+.inputs-grid {
+    grid-row: 1;
+    grid-column: 2;
+    width: 80%;
+    padding: 5px;
+    border: solid 2px;
+    margin: 50px auto 0 auto;
+    overflow: auto;
+}
+
+.inputs-header h2 {
+    display: inline;
+}
+
+.inputs-header {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    border-bottom: 5px solid lightgrey ;
+}
+.course, .inputs-header {
+    display: grid;
+    margin: 2%;
+    align-items: center;
+}
+
+/* Generic inputs settings */
+.name-input,
+.grade-input,
+.level-input,
+.credit-input {
+    outline: None;
+    font-size: 1.1em;
+    font-family: 'Muli', serif;
+    font-weight: bold;
+    color: #6a6a6a;
+    border: 3px solid lightgrey;
+    border-radius: 4px;
+}
+
+.grade-input:focus,
+.credit-input:focus {
+    color: black;
+    border: 3px solid #005db8;
+}
+
+
+/* Course name input */
+.name-input {
+    width: 70%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: None;
+    border-bottom: 3px solid #ccc;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+}
+.name-input:focus {
+    border: None;
+    border-bottom: 3px solid #005db8;
+}
+
+/* Grade and level input styling */
+.grade-input,
+.level-input {
+    -webkit-appearance: None;
+    -motz-appearance: None;
+    -o-appearance: None;
+    -ms-appearance: None;
+    appearance: None;
+    display: block;
+    padding: 10px 50px 10px 10px;
+    background: white url(../img/select.png) no-repeat 95% center;
+    width: 50%;
+    min-width: 100px;
+}
+/* Grade input styling */
+.grade-input {
+}
+
+/* Credit input styling */
+.credit-input {
+    width: 60px;
+    height: 50px;
+    text-align: center;
+}
+.credit-input::-webkit-inner-spin-button,
+.credit-input::-webkit-outer-spin-button {
+    opacity: 1;
+}
+
+/* Remove course */
+.remove-course {
+    color: lightgrey;
+    font-size: 1.5em;
+    margin: 0;
+}
+.remove-course:hover {
+    color: red;
+    font-weight: bold;
+}
+/* "Add course" button */
+#add-course {
+    margin-left: 2%;
+    margin-bottom: 2%;
+    background-color: cornflowerblue;
+    color: white;
+    font-family: 'Muli', sans-serif;
+    font-size: 1rem;
+    padding: 10px;
+    border: 3px solid transparent;
+}
+#add-course:hover {
+    background-color: #fdfdfd;
+    color: cornflowerblue;
+    border: 3px solid cornflowerblue;
+}
+/* GPA Display */
+.display-gpa {
+    margin-left: 10%;
+    grid-column: 2;
+    color: black;
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GPA Calculator!</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename="style/main-style.css") }}">
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli">
+    {% block head %}
+    {% endblock %}
+</head>
+<body>
+<div class="all-content">
+    <nav class="sidenav">
+        <a id="highschool-nav" href="/highschool">High School</a>
+        <a id="college-nav" href="/college">College</a>
+    </nav>
+    <div class="main-content">
+        <div class="scroll-content">
+            <header class="main-header">
+                {% block header %}
+                {% endblock %}
+            </header>
+            {% block main %}
+            {% endblock %}
+        </div>
+    </div>
+</div>
+{% block script %}
+{% endblock %}
+</body>
+</html>

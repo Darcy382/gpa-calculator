@@ -1,0 +1,42 @@
+{% extends "site_template.html" %}
+
+
+{% block head %}
+  <script type="text/javascript" src="{{ url_for('static', filename="scripts/" + calc_type + "-script.js") }}"></script>
+  <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+  <script type="text/javascript" src="{{ url_for('static', filename="scripts/main-script.js") }}"></script>
+  <script type="text/javascript" src="{{ url_for('static', filename="scripts/" + calc_type + "-script.js") }}"></script>
+  <link rel="stylesheet" href="{{ url_for('static', filename="style/" + calc_type + "-style.css") }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename="style/" + calc_type + "-style.css") }}">
+{% endblock %}
+
+
+{% block main %}
+      <form class="inputs-grid" name="classes">
+        <header class="inputs-header">
+            <h2>Course:</h2>
+            <h2>Grade:</h2>
+            {% block level_label %}
+            {% endblock %}
+          <h2>Credits:</h2>
+        </header>
+        <div id="courses"></div>
+        <input id="add-course" type="button" value="Add new course" onclick="addCourse()">
+      </form>
+      <div class="display-gpa">
+        <h3>GPA: </h3>
+        <h3 id="gpa"></h3>
+      </div>
+{% endblock %}
+
+{% block script %}
+<!-- Recalculate GPA as user changes grades or credits-->
+<script>
+  $(".inputs-grid").keyup(function () {
+    calculateGPA();
+  })
+  $(".inputs-grid").change(function () {
+    calculateGPA();
+  })
+</script>
+{% endblock %}
