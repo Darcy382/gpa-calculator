@@ -3,5 +3,31 @@
 }
 
 .course, .inputs-header {
-    grid-template-columns: 50% 15% 15% 10% 5%;
+    grid-template-columns: 35% 19% 31% 10% 5%;
+}
+
+.level-input {
+    min-width: 145px;
+}
+
+@media (max-width: 950px) {
+    .inputs-grid {
+        width: 95%;
+    }
+    .course {
+        margin: 0;
+    }
+
+}
+@media (max-width: 750px) {
+    .all-content {
+        grid-template-columns: 100%;
+    }
+    .sidenav {
+        height: 100px;
+        padding: 0;
+    }
+    .remove-course {
+        text-align: right;
+    }
 }

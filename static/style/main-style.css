@@ -144,10 +144,11 @@ body {
     padding: 10px 50px 10px 10px;
     background: white url(../img/select.png) no-repeat 95% center;
     width: 50%;
-    min-width: 100px;
 }
+
 /* Grade input styling */
 .grade-input {
+    min-width: 90px;
 }
 
 /* Credit input styling */
@@ -163,6 +164,7 @@ body {
 
 /* Remove course */
 .remove-course {
+    text-align: center;
     color: lightgrey;
     font-size: 1.5em;
     margin: 0;
